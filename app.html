@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Procesador de Tramas</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Procesador de Tramas</h1>
+
+  <div class="input-container">
+   
+    <label for="trama1">Trama 1:</label>
+    <label for="unidad1">Tipo de Unidad:</label>
+    <select id="unidad1">
+      <option value=""></option>
+      <option value="Pañol">Pañol</option>
+      <option value="Cosechadora">Cosechadora</option>
+      <option value="Camión">Camión</option>
+    </select>
+    <textarea id="trama1" placeholder="Ingrese la trama"></textarea>
+    <button onclick="procesarTrama1()">Procesar Trama 1</button>
+  </div>
+
+  <div class="input-container">
+    
+    <label for="trama2">Trama 2:</label>
+    <label for="unidad2">Tipo de Unidad:</label>
+    <select id="unidad2">
+      <option value=""></option>
+      <option value="Pañol">Pañol</option>
+      <option value="Cosechadora">Cosechadora</option>
+      <option value="Camión">Camión</option>
+    </select>
+    <textarea id="trama2" placeholder="Ingrese la trama"></textarea>
+    <button onclick="procesarTrama2()">Procesar Trama 2</button>
+  </div>
+
+  <div class="input-container">
+   
+    <label for="trama3">Trama 3:</label>
+    <label for="unidad3">Tipo de Unidad:</label>
+    <select id="unidad3">
+      <option value=""></option>
+      <option value="Pañol">Pañol</option>
+      <option value="Cosechadora">Cosechadora</option>
+      <option value="Camión">Camión</option>
+    </select>
+    <textarea id="trama3" placeholder="Ingrese la trama"></textarea>
+    <button onclick="procesarTrama3()">Procesar Trama 3</button>
+  </div>
+
+  <div class="input-container">
+  <label for="trama4">Trama 4:</label>
+  <label for="unidad4">Tipo de Unidad:</label>
+  <select id="unidad4">
+    <option value=""></option>
+    <option value="Pañol">Pañol</option>
+    <option value="Cosechadora">Cosechadora</option>
+    <option value="Camión">Camión</option>
+  </select>
+  <textarea id="trama4" placeholder="Ingrese la trama"></textarea>
+  <button onclick="procesarTrama4()">Procesar Trama 4</button>
+</div>
+</div>
+
+<div class="input-container">
+<label for="trama5">Trama 5:</label>
+  <label for="unidad5">Tipo de Unidad:</label>
+  <select id="unidad5">
+    <option value=""></option>
+    <option value="Pañol">Pañol</option>
+    <option value="Cosechadora">Cosechadora</option>
+    <option value="Camión">Camión</option>
+  </select>
+  <textarea id="trama5" placeholder="Ingrese la trama"></textarea>
+  <button onclick="procesarTrama5()">Procesar Trama 5</button>
+</div>
+</div>
+<div class="input-container">
+<label for="trama6">Trama 6:</label>
+  <label for="unidad6">Tipo de Unidad:</label>
+  <select id="unidad6">
+    <option value=""></option>
+    <option value="Pañol">Pañol</option>
+    <option value="Cosechadora">Cosechadora</option>
+    <option value="Camión">Camión</option>
+  </select>
+  <textarea id="trama6" placeholder="Ingrese la trama"></textarea>
+  <button onclick="procesarTrama6()">Procesar Trama 6</button>
+</div>
+</div>
+
+<div class="input-container">
+<label for="trama7">Trama 7:</label>
+  <label for="unidad7">Tipo de Unidad:</label>
+  <select id="unidad7">
+    <option value=""></option>
+    <option value="Pañol">Pañol</option>
+    <option value="Cosechadora">Cosechadora</option>
+    <option value="Camión">Camión</option>
+  </select>
+  <textarea id="trama7" placeholder="Ingrese la trama"></textarea>
+  <button onclick="procesarTrama7()">Procesar Trama 7</button>
+</div>
+</div>
+
+<div class="input-container">
+<label for="trama7">Trama 8:</label>
+  <label for="unidad8">Tipo de Unidad:</label>
+  <select id="unidad8">
+    <option value=""></option>
+    <option value="Pañol">Pañol</option>
+    <option value="Cosechadora">Cosechadora</option>
+    <option value="Camión">Camión</option>
+  </select>
+  <textarea id="trama8" placeholder="Ingrese la trama"></textarea>
+  <button onclick="procesarTrama8()">Procesar Trama 8</button>
+</div>
+</div>
+
+<div class="button-container">
+  <button onclick="procesarTodasLasTramas()">Procesar todas las tramas</button>
+  <button onclick="mostrarComparacionTramas()">Mostrar comparación de tramas</button>
+  <button onclick="limpiarTramas()">Limpiar tramas</button>
+</div>
+
+
+  <h2>Resultado proceso de tramas</h2>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Número de Trama</th>
+          <th>Tipo de Unidad</th>
+          <th>Tipo de Trama</th>
+          <th>Fecha</th>
+          <th>Hora Servidor</th>
+          <th>Hora Calc Servidor Arg (-3)</th>
+          <th>Fecha Posición</th>
+          <th>Hora Posición</th>
+          <th>Hora Calc Posición Arg (-3)</th>
+          <th>Diferencia Servidor vs Posición</th>
+          <th>Evento</th>
+          <th>Latitud</th>
+          <th>Longitud</th>
+        </tr>
+      </thead>
+      <tbody id="tablaResultados">
+      </tbody>
+    </table>
+  </div>
+  <section>
+
+    <div class="card">
+
+      <h2>Posiciones unidades en Mapa</h2>
+      <div id="map">
+   
+      </div>
+
+              
+  </section>
+
+
+
+  <h2>Resultado Comaparacion de tramas</h2>
+ 
+  <div id="comparacionTramas">
+    <div id="comparacionServidor">
+      <h2>Comparación Hora Servidor vs. Hora Servidor</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Trama</th>
+            <th>Tipo de Unidad</th>
+            <th>Hora Servidor</th>
+          </tr>
+        </thead>
+        <tbody id="comparacionServidorBody">
+        </tbody>
+      </table>
+    </div>
+    <div id="comparacionPosicion">
+      <h2>Comparación Hora Posición vs. Hora Posición</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Trama</th>
+            <th>Tipo de Unidad</th>
+            <th>Hora Posición</th>
+          </tr>
+        </thead>
+        <tbody id="comparacionPosicionBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+  crossorigin=""></script>
+
+</body>
+</html>
